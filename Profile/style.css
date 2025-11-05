@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fbfd;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px; /* Added padding for small screens */
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+}
+
+/* NEW: Profile Picture Style */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Makes it round */
+  object-fit: cover; /* Ensures image isn't stretched */
+  margin-bottom: 15px;
+  border: 4px solid #f1f5f9; /* Optional border */
+}
+
+h1 {
+  margin-top: 0; /* Updated margin */
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  color: #0f172a;
+}
+
+p {
+  margin-top: 0;
+  color: #334155;
+  font-weight: 500;
+  font-size: 1.1rem; /* Slightly larger */
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* NEW: Base styles for all links/buttons */
+.btn {
+  text-decoration: none;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none; /* For the <button> element */
+  font-family: inherit; /* For the <button> element */
+  font-size: 1rem; /* For the <button> element */
+}
+
+/* Style for primary links (like LinkedIn, GitHub) */
+.btn-primary {
+  background-color: #2563eb;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px); /* Add subtle hover effect */
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* Style for secondary buttons (like email) */
+.btn-secondary {
+  background-color: #64748b;
+}
+.btn-secondary:hover {
+  background-color: #475569;
+}
+
+/* NEW: Style for the "Copy Email" button after clicking */
+#copy-email-btn.copied {
+  background-color: #059669; /* Green success color */
+  cursor: default;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Adds a small space to the right of any icon inside a button */
+.btn i {
+  margin-right: 8px; 
+}
