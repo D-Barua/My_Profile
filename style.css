@@ -20,6 +20,7 @@ body {
   text-align: center;
   width: 90%;
   max-width: 420px;
+  animation: slideUpFadeIn 0.6s ease-out forwards;
 }
 
 .profile-pic {
@@ -29,6 +30,8 @@ body {
   object-fit: cover;
   margin-bottom: 15px;
   border: 4px solid #f1f5f9;
+  animation: slideUpFadeIn 0.6s ease-out 0.1s forwards, glow 2s infinite 1s;
+  opacity: 0; 
 }
 
 h1 {
@@ -36,6 +39,8 @@ h1 {
   margin-bottom: 8px;
   font-size: 1.8rem;
   color: #0f172a;
+  animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
+  opacity: 0; 
 }
 
 p {
@@ -43,12 +48,17 @@ p {
   color: #334155;
   font-weight: 500;
   font-size: 1.1rem;
+  animation: slideUpFadeIn 0.6s ease-out 0.3s forwards;
+  opacity: 0; 
+} 
 
 .buttons {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  animation: slideUpFadeIn 0.6s ease-out 0.4s forwards;
+  opacity: 0; 
 }
 
 .btn {
@@ -67,17 +77,26 @@ p {
 .btn-primary {
   background-color: #2563eb;
 }
+
 .btn-primary:hover {
   background-color: #1d4ed8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35); 
 }
 
 .btn-secondary {
   background-color: #64748b;
 }
+
 .btn-secondary:hover {
   background-color: #475569;
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(71, 85, 105, 0.3); 
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
 #copy-email-btn.copied {
@@ -92,9 +111,8 @@ p {
 }
 
 .btn i {
-  margin-right: 8px; 
-
-}
+  margin-right: 8px;
+} 
 
 @keyframes slideUpFadeIn {
   from {
@@ -107,44 +125,11 @@ p {
   }
 }
 
-.card {
-  animation: slideUpFadeIn 0.6s ease-out forwards;
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0px rgba(37, 99, 235, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
+  }
 }
-
-.profile-pic {
-  animation: slideUpFadeIn 0.6s ease-out 0.1s forwards;
-  opacity: 0;
-}
-
-h1 {
-  animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
-  opacity: 0;
-}
-
-p {
-  animation: slideUpFadeIn 0.6s ease-out 0.3s forwards;
-  opacity: 0;
-}
-
-.buttons {
-  animation: slideUpFadeIn 0.6s ease-out 0.4s forwards;
-  opacity: 0;
-}
-
-.btn-primary:hover {
-  background-color: #1d4ed8;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35);
-}
-
-.btn-secondary:hover {
-  background-color: #475569;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(71, 85, 105, 0.3);
-}
-
-.btn:active {
-  transform: translateY(1px);
-  box-shadow: none;
-}
-
