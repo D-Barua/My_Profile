@@ -100,4 +100,74 @@ p {
 /* Adds a small space to the right of any icon inside a button */
 .btn i {
   margin-right: 8px; 
+
+}
+
+/* --- NEW ANIMATIONS --- */
+
+/* 1. Page Load Animation */
+
+/* We will apply this animation to the card */
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Start 30px down */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at its normal position */
+  }
+}
+
+/* Apply the animation to the card */
+.card {
+  /* ... (keep all your existing .card styles) ... */
+  animation: slideUpFadeIn 0.6s ease-out forwards;
+}
+
+/* We can add a subtle delay for each item for a "staggered" effect */
+/* 'forwards' keeps it in the 'to' state */
+.profile-pic {
+  animation: slideUpFadeIn 0.6s ease-out 0.1s forwards;
+  opacity: 0; /* Start as invisible */
+}
+
+h1 {
+  animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+p {
+  animation: slideUpFadeIn 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.buttons {
+  animation: slideUpFadeIn 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+
+/* 2. Better Button Hover Effects */
+/* We will update the existing .btn-primary:hover */
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px); /* Make it lift a little higher */
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35); /* Bigger shadow */
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+  transform: translateY(-3px); /* Make it lift a little higher */
+  box-shadow: 0 6px 12px rgba(71, 85, 105, 0.3);
+}
+
+
+/* 3. Button Click Effect */
+/* This makes the button "press down" when you click it */
+
+.btn:active {
+  transform: translateY(1px); /* Move down slightly */
+  box-shadow: none; /* Remove the shadow as if it's pressed */
 }
