@@ -1,12 +1,10 @@
 import qrcode
 
-url = input("Enter the URL: ").strip()
-file_path = "D:\\Profile\\qrcode.png"
+file_path="D:\\Profile\\qrcode.png"
+link='https://d-barua.github.io/My_Profile/'
 
 qr = qrcode.QRCode()
-qr.add_data(url)
+qr.add_data(link)
 
-img = qr.make_image()
+img= qr.make_image()
 img.save(file_path)
-
-print("QR Code was generated!")
